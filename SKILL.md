@@ -1,5 +1,7 @@
 ---
 name: skill-multi-model-overconfidence-guard
+version: 1.4.0
+kind: skill
 metadata:
   version: "1.4.0"
 description: >-

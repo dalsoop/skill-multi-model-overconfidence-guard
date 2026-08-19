@@ -1,0 +1,24 @@
+{
+  "skill": "skill-multi-model-overconfidence-guard",
+  "notes": "Budget, Grok, prompt score. Consult belongs to the gate skill.",
+  "cases": [
+    {
+      "id": "happy-01-overconfidence",
+      "should_trigger": true,
+      "prompt": "과신 잡아. grok 리뷰로 적대적 리뷰 해줘",
+      "checks": { "preserve_tokens": ["Budget"] }
+    },
+    {
+      "id": "happy-02-prompt",
+      "should_trigger": true,
+      "prompt": "prompt scoring before send, grok review",
+      "checks": { "preserve_tokens": ["Prompt"] }
+    },
+    {
+      "id": "neg-01-typo",
+      "should_trigger": false,
+      "prompt": "변수 이름 오타 하나만 고쳐줘",
+      "checks": {}
+    }
+  ]
+}
